@@ -2,6 +2,20 @@
 
 > 让走过的每一步，都在星空中留下光
 
+[![CI](https://github.com/sl413/xinglv-dsh/actions/workflows/ci.yml/badge.svg)](https://github.com/sl413/xinglv-dsh/actions/workflows/ci.yml)
+[![部署到 GitHub Pages](https://github.com/sl413/xinglv-dsh/actions/workflows/pages.yml/badge.svg)](https://github.com/sl413/xinglv-dsh/actions/workflows/pages.yml)
+
+## 在线预览
+
+**<https://sl413.github.io/xinglv-dsh/>** —— 点开就能用，不用安装任何东西。
+
+这是纯静态构建（`VITE_STATIC=1`）：所有记录只存在**你自己的浏览器**里，
+线上版本没有服务器、没有管理端，群星列传用的是打包进前端的只读种子库。
+想用完整功能（含管理端与多代备份），在本地跑 `pnpm start` 打开 <http://127.0.0.1:5274/>。
+
+分享也给这个地址：深链 `/lives`、`/life/<id>` 都能直接打开。
+仓库页的入口在右侧 **About → 站点链接** 与 **Environments → github-pages**。
+
 ## 想从零复现这个项目？
 
 看 **[docs/PROMPTS.md](docs/PROMPTS.md)** —— **一个文件，自包含**，不需要跳去别处查东西。
