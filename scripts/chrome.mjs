@@ -1,6 +1,6 @@
 // 浏览器解析：让所有脚本都能在本机和 CI（Linux）上跑起来，不再各写一份写死的路径。
 // ---------------------------------------------------------------------------
-// 什么时候需要它：scripts/shot.mjs、qa-suite.mjs、promo-*.mjs 都要开 Chrome，
+// 什么时候需要它：scripts/shot.mjs 与 scripts/qa-suite.mjs 都要开 Chrome，
 // 原来每个文件里都写死了 'C:/Program Files/Google/Chrome/Application/chrome.exe' ——
 // 换一台机器、或者放进 GitHub Actions（Linux）就全跑不起来。
 import { existsSync } from 'node:fs'
