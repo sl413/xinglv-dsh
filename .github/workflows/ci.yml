@@ -58,8 +58,6 @@ jobs:
     env:
       # 服务器首次启动时用它当初始口令，套件用同一个变量登录（不在代码里写死）
       XINGLV_ADMIN_PASSWORD: qa-suite-password
-      # 运行期数据写到临时目录，别脏了仓库
-      XINGLV_DATA: ${{ runner.temp }}/xinglv-data
     steps:
       - uses: actions/checkout@v4
 
@@ -93,6 +91,13 @@ jobs:
           "$CHROME" --version
 
       - name: 启动应用服务器
+        # ★ XINGLV_DATA 必须写在**步骤级** env：`runner.*` 上下文不允许出现在 job 级 env 里。
+        #   写错时 YAML 依然合法（PyYAML 也能解析），但 GitHub 会拒绝整个工作流：
+        #     failed to parse workflow: (Line: ..): Unrecognized named-value: 'runner'
+        #   症状是「运行记录 0 秒失败、0 个 job、名称显示成文件路径」。
+        #   这一类错误本地查不出来，只能靠真跑一次。
+        env:
+          XINGLV_DATA: ${{ runner.temp }}/xinglv-data
         run: |
           node server/server.mjs > server.log 2>&1 &
           for i in $(seq 1 60); do
