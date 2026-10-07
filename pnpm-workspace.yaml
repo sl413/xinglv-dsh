@@ -1,0 +1,9 @@
+# 星履 · pnpm 配置
+# nodeLinker: hoisted —— 使用真实目录而非 Windows junction，
+# 避免 Node 在受限环境下的 ESM 解析无法穿过 reparse point。
+nodeLinker: hoisted
+
+# esbuild 的 postinstall 需要管道 stdio（受限环境下 EPERM）；
+# 实测其运行时通过 @esbuild/<platform> 包直接解析二进制，无需该脚本。
+allowBuilds:
+  esbuild: false

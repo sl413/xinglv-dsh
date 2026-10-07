@@ -1,0 +1,18 @@
+node_modules/
+.pnpm-store/
+dist/
+.vite/
+*.local
+*.log
+.vscode/
+.DS_Store
+.shots/
+.tmp/
+.shiyun-shots/
+.shiyun-scratch/
+_ref/
+
+# 服务器的运行时数据：管理员口令哈希、会话密钥、名人库的当前状态。
+# 名人库的「源头」是 server/seed/lives.json（提交进仓库）；
+# server/data/ 是运行期状态，绝不入库 —— 里面既有口令哈希，也会因为编辑而与种子分叉。
+server/data/

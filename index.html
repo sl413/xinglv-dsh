@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#05070e" />
+    <meta name="color-scheme" content="dark" />
+    <title>星履 · 让走过的每一步，都在星空中留下光</title>
+    <meta name="description" content="星履是一套让人看见自己走过的人生可视化系统：每一次真实的成长，都在三维人生星空中点亮一颗星。" />
+    <style>
+      /* 进入前的最小舞台：只做深空渐隐，避免白屏；不模拟星空。 */
+      html, body { margin: 0; padding: 0; background: #05070e; }
+      #root { position: fixed; inset: 0; }
+      #xinglv-gate {
+        position: fixed; inset: 0; z-index: 50;
+        display: flex; align-items: center; justify-content: center;
+        background:
+          radial-gradient(120% 90% at 50% 58%, #0b1024 0%, #070a16 42%, #04060c 100%);
+        transition: opacity 900ms cubic-bezier(.22,.61,.36,1);
+      }
+      #xinglv-gate.is-gone { opacity: 0; pointer-events: none; }
+      #xinglv-gate .word {
+        font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong", serif;
+        font-size: 13px; letter-spacing: .62em; text-indent: .62em;
+        color: #8fa3bd; opacity: .0;
+        animation: xl-breathe 3.6s ease-in-out infinite;
+      }
+      @keyframes xl-breathe {
+        0%, 100% { opacity: .16; } 50% { opacity: .5; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="xinglv-gate"><div class="word">星 履</div></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

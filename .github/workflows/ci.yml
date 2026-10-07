@@ -1,0 +1,121 @@
+name: CI
+
+# 为什么要有这个工作流：
+# pages.yml 只管「部署」—— 它会在构建成功时把站点发出去，但**构建成功不等于功能没坏**。
+# 之前项目里一套断言都没有，回归只能靠人肉发现。这里把两类检查都挂上：
+#   · check  ：类型 / 收录范围 / 编码与控制字符 / 构建 / 纯函数测试（快，几十秒）
+#   · qa     ：真开一个 Chrome，跑 47 条功能与流畅度断言（慢，几分钟）
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: 静态检查（类型 / 收录 / 编码 / 构建 / 纯函数）
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 生成种子 + 收录范围检查
+        # check-library 会拒绝「出生/逝世/结婚」这类传记事件混进成就条目
+        run: pnpm seed
+
+      - name: 编码与控制字符体检
+        # 反引号被 PowerShell 当转义符那类事故，就是这一步抓的
+        run: pnpm check:encoding
+
+      - name: 类型检查 + 构建
+        run: pnpm build
+
+      - name: 纯函数测试
+        # 时间解析 / 坐标映射 / 逆函数 / 散布统计 / 世界组装，共 15 条
+        run: pnpm test:pure
+
+  qa:
+    name: 功能与流畅度（真实浏览器）
+    runs-on: ubuntu-latest
+    needs: check
+    timeout-minutes: 30
+    env:
+      # 服务器首次启动时用它当初始口令，套件用同一个变量登录（不在代码里写死）
+      XINGLV_ADMIN_PASSWORD: qa-suite-password
+      # 运行期数据写到临时目录，别脏了仓库
+      XINGLV_DATA: ${{ runner.temp }}/xinglv-data
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 生成种子
+        run: pnpm seed
+
+      - name: 构建
+        run: pnpm build
+
+      - name: 定位 Chrome 并交给脚本
+        # 脚本用 scripts/chrome.mjs 解析浏览器路径；这里显式告诉它，找不到就直接失败
+        run: |
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)"
+          if [ -z "$CHROME" ]; then
+            echo "::error::这台 runner 上没有 Chrome，功能测试无法进行"
+            exit 1
+          fi
+          echo "CHROME_PATH=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+
+      - name: 启动应用服务器
+        run: |
+          node server/server.mjs > server.log 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -sf http://127.0.0.1:5274/api/lives > /dev/null; then
+              echo "服务已就绪（第 ${i} 次探测）"
+              curl -sf http://127.0.0.1:5274/api/lives | head -c 300
+              echo
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "::error::服务器 120 秒内没起来"
+          tail -40 server.log
+          exit 1
+
+      - name: 功能与流畅度断言
+        # 没有 GPU 的机器靠 --enable-unsafe-swiftshader 跑软件 WebGL（见 scripts/chrome.mjs）
+        run: pnpm test:qa
+
+      - name: 失败时把服务器日志带上来
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-log
+          path: server.log
+          if-no-files-found: ignore

@@ -1,0 +1,43 @@
+{
+  "name": "xinglv",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "description": "星履 · 让走过的每一步，都在星空中留下光",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "start": "node server/server.mjs",
+    "serve": "node server/server.mjs",
+    "seed": "node scripts/build-seed.mjs && node scripts/build-demo-life.mjs && node scripts/check-library.mjs",
+    "seed:demo": "node scripts/build-demo-life.mjs",
+    "check:library": "node scripts/check-library.mjs",
+    "check:encoding": "node scripts/scan-encoding.mjs",
+    "test:pure": "node node_modules/esbuild/bin/esbuild scripts/tests/pure.test.ts --bundle --platform=node --format=esm --outfile=.tmp/pure.test.mjs --log-level=warning && node --test .tmp/pure.test.mjs",
+    "test:qa": "node scripts/qa-suite.mjs",
+    "test": "pnpm test:pure && pnpm test:qa",
+    "shot": "node scripts/shot.mjs",
+    "static:preview": "node scripts/static-preview.mjs dist 5277 /xinglv/",
+    "preview": "node scripts/serve.mjs dist 5276"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^9.3.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "postprocessing": "^6.37.8",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "three": "^0.180.0",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@types/three": "^0.180.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "puppeteer-core": "^25.12.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  }
+}

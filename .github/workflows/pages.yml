@@ -1,0 +1,74 @@
+# 把星履构建成纯静态站点并发布到 GitHub Pages
+# ---------------------------------------------------------------------------
+# 这个工作流做三件事，每一件都对应一个必须处理的部署问题：
+#   1. 生成种子（名人库）—— server/seed/*.json 是提交进仓库的产物，
+#      这里重新生成一次，保证「仓库里的数据」和「生成脚本」始终一致；
+#   2. 用 VITE_STATIC=1 + VITE_BASE=/仓库名/ 构建 —— 静态站要带上虚构人物，
+#      而且页面挂在子路径下，资源与路由都带前缀（路由侧见 src/core/router.ts）；
+#   3. 把 index.html 复制成 404.html —— Pages 上 /life/xxx 这类深链没有对应文件，
+#      由 404.html 接管，页面才能刷新、才能分享。
+#
+# 需要一次性设置：仓库 Settings → Pages → Source 选「GitHub Actions」。
+name: 部署到 GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只跑一个部署；新的推送取消排队中的旧任务
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 生成名人库种子（并做收录范围检查）
+        run: pnpm seed
+
+      - name: 构建静态站点
+        env:
+          VITE_STATIC: '1'
+          # 仓库挂在 username.github.io/<仓库名>/ 下，这里自动取到仓库名
+          VITE_BASE: /${{ github.event.repository.name }}/
+        run: pnpm build
+
+      - name: 深链回退（Pages 用 404.html 接管 /life/xxx）
+        run: cp dist/index.html dist/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

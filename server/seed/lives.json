@@ -1,0 +1,1555 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-06T10:44:21.010Z",
+  "lives": [
+    {
+      "id": "su-shi",
+      "name": "苏轼",
+      "tagline": "北宋文人、官员，号东坡居士",
+      "summary": "一生在仕途上被反复推搡，但在每一个被推到的地方都留下了东西：徐州的长堤、杭州的苏堤与病坊、儋州的学堂，以及数量惊人的诗文与书法。他留下的文字比他的官职流传得远得多。",
+      "birthYear": 1037,
+      "deathYear": 1101,
+      "provenance": "收录范围：只收录可称为成就的公开节点 —— 作品、著作、官职、功名、工程、荣誉、讲学、育人。生卒、疾病、婚丧、迁居与单纯的行程不收录（生卒年份见人物资料）。本条目为离线整理，只使用年份级、流传较广的公开节点；个别年份学界有异说者已在标题中标「约」。未逐条核对，不作为史料引用。资料来源字段一律留空，留给管理端逐条补全。",
+      "importanceRule": "功名（进士及第、制科入三等）、代表作、重大工程（守徐州、筑苏堤）、最高文职（翰林学士）、开创性讲学记为 4；其余公开成就记为 3。共鸣度不评分。",
+      "published": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z",
+      "journeys": [
+        {
+          "id": "jr-su-shi-0",
+          "name": "出蜀与及第",
+          "domainHint": "academy"
+        },
+        {
+          "id": "jr-su-shi-1",
+          "name": "为官一方：水利与民生",
+          "domainHint": "craft"
+        },
+        {
+          "id": "jr-su-shi-2",
+          "name": "翰林与元祐还朝",
+          "domainHint": "career"
+        },
+        {
+          "id": "jr-su-shi-3",
+          "name": "黄州：赤壁与寒食",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-su-shi-4",
+          "name": "东坡的笔墨",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-su-shi-5",
+          "name": "岭南与儋州",
+          "domainHint": "academy"
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ach-su-shi-000",
+          "title": "与弟苏辙同榜进士及第",
+          "when": "1057",
+          "domain": "academy",
+          "pivotal": true,
+          "context": "（史实背景）嘉祐二年，苏轼与弟苏辙同榜进士及第，主考官欧阳修对其文极为赏识。这是他踏入仕途的起点。",
+          "source": "",
+          "journey": "出蜀与及第"
+        },
+        {
+          "id": "ach-su-shi-001",
+          "title": "应试策论《刑赏忠厚之至论》",
+          "when": "1057",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）礼部试中所作策论，是欧阳修读到并大为称赏的那一篇，也是苏轼最早为人传诵的文章。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-002",
+          "title": "制科入第三等",
+          "when": "1061",
+          "domain": "academy",
+          "pivotal": true,
+          "context": "（史实背景）宋代制科入三等者极少。苏轼以此正式进入仕途，此后历任内外官职。",
+          "source": "",
+          "journey": "出蜀与及第"
+        },
+        {
+          "id": "ach-su-shi-003",
+          "title": "首任签书凤翔府判官",
+          "when": "1061",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）赴凤翔任签书节度判官，在任约三年。这是他第一任实际的地方官职。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-004",
+          "title": "作《思治论》",
+          "when": "1061",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）在凤翔任上所作，讨论当时财政与吏治的积弊。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-005",
+          "title": "还朝任判登闻鼓院",
+          "when": "1064",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）凤翔任满后还朝，任职于登闻鼓院等机构。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-006",
+          "title": "通判杭州",
+          "when": "1071",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）因与王安石政见不合而自请外任，通判杭州。在杭州的三年是他词作大量出现的一段时期。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-007",
+          "title": "作《饮湖上初晴后雨》",
+          "when": "1073",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）在杭州任上所作，写西湖晴雨之景，是西湖题材中流传最广的一首。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-008",
+          "title": "移知密州",
+          "when": "1074",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）由杭州移知密州（今山东诸城）。任上写作多首传世词作，也主持过当地赈灾。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-009",
+          "title": "作《江城子·乙卯正月二十日夜记梦》",
+          "when": "1075",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）在密州任上梦见亡妻王弗而作。这首悼亡词被后世视为同题材中的代表作。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-010",
+          "title": "作《水调歌头·明月几时有》",
+          "when": "1076",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）中秋怀念弟弟苏辙而作，此后成为中秋题材中流传最广的一首词。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-011",
+          "title": "移知徐州",
+          "when": "1077",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）由密州移知徐州。到任当年即遇上黄河决口。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-012",
+          "title": "率军民筑堤守徐州",
+          "when": "1077",
+          "domain": "craft",
+          "pivotal": true,
+          "context": "（史实背景）黄河在曹村决口，洪水逼近徐州城。苏轼禁止富民出城，亲赴武卫营调兵，与军民筑长堤护城，水退后受到朝廷嘉奖。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-013",
+          "title": "移知湖州",
+          "when": "1079",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）由徐州移知湖州。依例所上的《湖州谢上表》后来被弹劾者指为讥讽朝廷，酿成乌台诗案。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-014",
+          "title": "作《卜算子·黄州定慧院寓居作》",
+          "when": "1080",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）贬居黄州初期所作。此词以孤鸿自况，是他在困境中留下的代表作之一。",
+          "source": "",
+          "journey": "黄州：赤壁与寒食"
+        },
+        {
+          "id": "ach-su-shi-015",
+          "title": "筑东坡雪堂",
+          "when": "1082",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（史实背景）友人马梦得为苏轼请得黄州城东旧营地，他开荒其中并筑屋名「雪堂」，自号东坡居士。此后的黄州诗文多与此地相关。",
+          "source": "",
+          "journey": "黄州：赤壁与寒食"
+        },
+        {
+          "id": "ach-su-shi-016",
+          "title": "作《念奴娇·赤壁怀古》",
+          "when": "1082",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）游黄州赤壁（赤鼻矶）所作。此处并非三国赤壁古战场，但此词此后几乎定义了赤壁的文学形象。",
+          "source": "",
+          "journey": "黄州：赤壁与寒食"
+        },
+        {
+          "id": "ach-su-shi-017",
+          "title": "作前后《赤壁赋》",
+          "when": "1082",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）与友人夜游赤壁后作《前赤壁赋》，同年十月又作《后赤壁赋》，以主客问答写江上之景与时间之变。",
+          "source": "",
+          "journey": "黄州：赤壁与寒食"
+        },
+        {
+          "id": "ach-su-shi-018",
+          "title": "自书《黄州寒食诗帖》",
+          "when": "1082",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）自书诗稿，后世列为书法史上的名迹之一，与《兰亭序》《祭侄文稿》并称。",
+          "source": "",
+          "journey": "黄州：赤壁与寒食"
+        },
+        {
+          "id": "ach-su-shi-019",
+          "title": "作《定风波·莫听穿林打叶声》",
+          "when": "1083",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）与友人出行途中遇雨所作，小序写明「同行皆狼狈，余独不觉」。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-020",
+          "title": "作《题西林壁》",
+          "when": "1084",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）游庐山时题于西林寺壁，是宋诗中传播最广的一首。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-021",
+          "title": "神宗崩后被召还朝",
+          "when": "1085",
+          "domain": "career",
+          "pivotal": true,
+          "context": "（史实背景）宋神宗去世，年幼的哲宗即位，高太后听政，司马光等旧党起用，苏轼由贬所被召还朝。",
+          "source": "",
+          "journey": "翰林与元祐还朝"
+        },
+        {
+          "id": "ach-su-shi-022",
+          "title": "任翰林学士知制诰",
+          "when": "1086",
+          "domain": "career",
+          "pivotal": true,
+          "context": "（史实背景）苏轼迁翰林学士、知制诰，负责起草诏令。这是他一生担任过的最高文职。",
+          "source": "",
+          "journey": "翰林与元祐还朝"
+        },
+        {
+          "id": "ach-su-shi-023",
+          "title": "黄庭坚、秦观等聚于门下",
+          "when": "1086",
+          "domain": "relation",
+          "pivotal": false,
+          "context": "（史实背景）黄庭坚、秦观、晁补之、张耒等与苏轼交游问学，后世称为「苏门四学士」。这是他在文脉传承上留下的影响。",
+          "source": "",
+          "journey": "翰林与元祐还朝"
+        },
+        {
+          "id": "ach-su-shi-024",
+          "title": "出知杭州",
+          "when": "1089",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）苏轼再度到杭州任职，距他上一次通判杭州已近二十年，到任后即着手整治西湖。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-025",
+          "title": "疏浚西湖、以葑泥筑长堤",
+          "when": "1090",
+          "domain": "craft",
+          "pivotal": true,
+          "context": "（史实背景）西湖淤塞，苏轼主持疏浚，用挖出的葑泥堆筑长堤，后人称「苏堤」；同时在湖中立石塔标示禁种区。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-026",
+          "title": "在杭州办病坊、施药赈疫",
+          "when": "1090",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（史实背景）在杭州期间遇疫病，苏轼参与筹办病坊、施药赈济，并募款维持。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-027",
+          "title": "知颍州并主持当地水利",
+          "when": "1091",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）由杭州召还后出知颍州，在任时间不长，仍主持过当地的水利工程。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-028",
+          "title": "知扬州，上疏请罢扰民之法",
+          "when": "1092",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）由颍州移知扬州，在任约半年，曾上疏请罢部分扰民之法。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-029",
+          "title": "知定州，整饬军纪、整修营房",
+          "when": "1093",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）出知定州，在任整顿边防军纪、修缮营房。这是他最后一次担任北方边地的长官。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-030",
+          "title": "作《荔枝叹》",
+          "when": "1096",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）贬居惠州时所作，借汉唐贡荔枝之事议论扰民之弊。",
+          "source": "",
+          "journey": "岭南与儋州"
+        },
+        {
+          "id": "ach-su-shi-031",
+          "title": "在儋州讲学授徒",
+          "when": "1098",
+          "domain": "academy",
+          "pivotal": true,
+          "context": "（史实背景）贬居海南儋州期间，苏轼以文会友、开馆讲学，对当地文教有相当影响，后世记为「东坡书院」之始。",
+          "source": "",
+          "journey": "岭南与儋州"
+        },
+        {
+          "id": "ach-su-shi-032",
+          "title": "在儋州整理旧稿、撰写笔记",
+          "when": "1099",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）贬居海南期间，苏轼整理旧稿并撰写笔记杂说，后世辑为《东坡志林》一类著作。",
+          "source": "",
+          "journey": "岭南与儋州"
+        },
+        {
+          "id": "ach-su-shi-033",
+          "title": "作《自题金山画像》",
+          "when": "1101",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）北归途中过镇江金山寺，见自己的画像而题诗，以「问汝平生功业」自述一生。这是他留下的最后一批作品之一。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-034",
+          "title": "作《和子由澠池怀旧》",
+          "when": "1061",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）赴凤翔任职途中和弟弟苏辙的诗，以「雪泥鸿爪」写人生的偶然与留痕，是「雪泥鸿爪」这一典故的出处。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-035",
+          "title": "筑超然台并作《超然台记》",
+          "when": "1075",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（史实背景）在密州修葺城北旧台，由苏辙命名为「超然台」，苏轼作记。这是他在地方任上留下的一处营造与一篇名记。",
+          "source": "",
+          "journey": "为官一方：水利与民生"
+        },
+        {
+          "id": "ach-su-shi-036",
+          "title": "作《狱中示子由》",
+          "when": "1079",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）乌台诗案被关押御史台狱期间写给弟弟的诗，其中「与君世世为兄弟」一句最为人传诵。",
+          "source": "",
+          "journey": "东坡的笔墨"
+        },
+        {
+          "id": "ach-su-shi-037",
+          "title": "作《记承天寺夜游》",
+          "when": "1083",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）贬居黄州时夜访承天寺后所作的小品，全文不足百字，是宋代小品文的名篇。",
+          "source": "",
+          "journey": "黄州：赤壁与寒食"
+        },
+        {
+          "id": "ach-su-shi-038",
+          "title": "作《洗儿诗》",
+          "when": "1083",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）黄州得子后所作，以「我被聪明误一生」自嘲，是他在贬谪中少见的一首戏作。",
+          "source": "",
+          "journey": "黄州：赤壁与寒食"
+        }
+      ]
+    },
+    {
+      "id": "einstein",
+      "name": "爱因斯坦",
+      "tagline": "物理学家，相对论创立者",
+      "summary": "在专利局当小职员的那几年里写下四篇论文，此后一生都在追问时间与空间到底是什么：狭义相对论、广义相对论、宇宙学方程、量子统计。后半生在普林斯顿度过。",
+      "birthYear": 1879,
+      "deathYear": 1955,
+      "provenance": "收录范围：只收录可称为成就的公开节点 —— 作品、著作、论文、官职、功名、工程、荣誉、讲学、育人。生卒、疾病、婚丧、迁居与单纯的行程不收录（生卒年份见人物资料）。本条目为离线整理，只使用年份级、流传较广的公开节点，未逐条核对，不作为史料引用。资料来源字段一律留空 —— 它留给管理端逐条补全，而不是在这里编造一个看起来很像的引文。",
+      "importanceRule": "奇迹年的四篇论文、广义相对论场方程、诺贝尔奖记为 4；其余公开成就（学位、教职、论文）记为 3。共鸣度不评分。",
+      "fictional": false,
+      "published": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z",
+      "journeys": [
+        {
+          "id": "jr-einstein-0",
+          "name": "专利局里的奇迹年",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-einstein-1",
+          "name": "从伯尔尼到柏林",
+          "domainHint": "academy"
+        },
+        {
+          "id": "jr-einstein-2",
+          "name": "广义相对论",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-einstein-3",
+          "name": "量子与统计",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-einstein-4",
+          "name": "普林斯顿",
+          "domainHint": "career"
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ach-einstein-000",
+          "title": "自苏黎世联邦理工学院毕业",
+          "when": "1900",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）他毕业于苏黎世联邦理工学院师范系，取得教师资格，但未能获得学校教职。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-001",
+          "title": "获苏黎世大学博士学位",
+          "when": "1905",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）他在专利局任职期间提交并完成了博士论文。",
+          "source": "",
+          "journey": "专利局里的奇迹年"
+        },
+        {
+          "id": "ach-einstein-002",
+          "title": "发表光量子假说，解释光电效应",
+          "when": "1905",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）这一年四篇论文中的第一篇，提出光的能量以量子形式存在。他后来正是因这项工作获得诺贝尔物理学奖。",
+          "source": "",
+          "journey": "专利局里的奇迹年"
+        },
+        {
+          "id": "ach-einstein-003",
+          "title": "发表布朗运动论文",
+          "when": "1905",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他以分子运动论解释悬浮微粒的不规则运动，为原子真实存在提供了可检验的论据。",
+          "source": "",
+          "journey": "专利局里的奇迹年"
+        },
+        {
+          "id": "ach-einstein-004",
+          "title": "发表狭义相对论",
+          "when": "1905",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）《论动体的电动力学》重建了时间与空间的关系，是二十世纪物理学的基石之一。",
+          "source": "",
+          "journey": "专利局里的奇迹年"
+        },
+        {
+          "id": "ach-einstein-005",
+          "title": "提出质能关系",
+          "when": "1905",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）作为狭义相对论的补充论文，给出质量与能量的等价关系。",
+          "source": "",
+          "journey": "专利局里的奇迹年"
+        },
+        {
+          "id": "ach-einstein-006",
+          "title": "发表固体比热的量子理论",
+          "when": "1907",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他把普朗克的量子假设用于固体中原子的振动，解释了低温下比热下降的现象。这是早期量子论的三篇奠基性论文之一。",
+          "source": "",
+          "journey": "量子与统计"
+        },
+        {
+          "id": "ach-einstein-007",
+          "title": "提出等效原理",
+          "when": "1907",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）他论证引力与加速度在局部不可区分，并指出引力会使光线弯曲。这是通往广义相对论的关键一步。",
+          "source": "",
+          "journey": "广义相对论"
+        },
+        {
+          "id": "ach-einstein-008",
+          "title": "任伯尔尼大学编外讲师",
+          "when": "1908",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）他离开专利局，开始正式的学术生涯。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-009",
+          "title": "任苏黎世大学副教授",
+          "when": "1909",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）他获得第一个正式教职。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-010",
+          "title": "预言日食时星光会被太阳偏折",
+          "when": "1911",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他从等效原理推出光线经过太阳附近会偏折并给出可检验的预言（当时的数值还不准确，1915 年被自己修正）。",
+          "source": "",
+          "journey": "广义相对论"
+        },
+        {
+          "id": "ach-einstein-011",
+          "title": "任布拉格德语大学正教授",
+          "when": "1911",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）他赴布拉格任理论物理学正教授，在任约一年半。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-012",
+          "title": "回苏黎世联邦理工任教授",
+          "when": "1912",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）他回到母校任教，与格罗斯曼合作研究引力理论。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-013",
+          "title": "任柏林大学教授并当选普鲁士科学院院士",
+          "when": "1914",
+          "domain": "career",
+          "pivotal": true,
+          "context": "（史实背景）他迁往柏林，任大学教授并当选普鲁士科学院院士，此后在此工作近二十年。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-014",
+          "title": "完成广义相对论场方程",
+          "when": "1915-11",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）经过数年摸索，他向普鲁士科学院提交了广义相对论的完整场方程，并用以解释水星近日点的进动。这是他对物理学最重要的贡献。",
+          "source": "",
+          "journey": "广义相对论"
+        },
+        {
+          "id": "ach-einstein-015",
+          "title": "出版《广义相对论的基础》",
+          "when": "1916",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他把广义相对论系统整理成书，成为此后几十年被引用的经典表述。",
+          "source": "",
+          "journey": "广义相对论"
+        },
+        {
+          "id": "ach-einstein-016",
+          "title": "任德国物理学会主席",
+          "when": "1916",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）他在战时被推举为德国物理学会主席，任内主张学术的国际性。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-017",
+          "title": "发表辐射的量子理论，导出受激发射",
+          "when": "1916",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他重新推导普朗克辐射定律，导出光量子携带的动量，并给出受激发射的概念 —— 这是后来激光的理论基础。",
+          "source": "",
+          "journey": "量子与统计"
+        },
+        {
+          "id": "ach-einstein-018",
+          "title": "任威廉皇帝物理研究所所长",
+          "when": "1917",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）他出任新成立的威廉皇帝物理研究所所长，这一职位使他能在战时继续研究。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-019",
+          "title": "发表广义相对论的宇宙学考察",
+          "when": "1917",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他尝试用场方程描述整个宇宙，引入「宇宙项」，开启了现代宇宙学。",
+          "source": "",
+          "journey": "广义相对论"
+        },
+        {
+          "id": "ach-einstein-020",
+          "title": "广义相对论获日食观测证实",
+          "when": "1919",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）英国两支远征队观测到日食期间星光经过太阳附近发生偏折，与广义相对论的预言一致，他因此一夜之间成为世界名人。",
+          "source": "",
+          "journey": "广义相对论"
+        },
+        {
+          "id": "ach-einstein-021",
+          "title": "获诺贝尔物理学奖",
+          "when": "1922",
+          "domain": "academy",
+          "pivotal": true,
+          "context": "（史实背景）他获得 1921 年度的诺贝尔物理学奖，授奖理由是光电效应定律。同年他还在研究统一场论。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-022",
+          "title": "爱因斯坦研究所与「爱因斯坦塔」在波茨坦落成",
+          "when": "1924",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（史实背景）以他命名的天体物理研究所落成，附属的太阳塔用于验证相对论效应。",
+          "source": "",
+          "journey": "从伯尔尼到柏林"
+        },
+        {
+          "id": "ach-einstein-023",
+          "title": "发表单原子理想气体的量子理论",
+          "when": "1924",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他在玻色来信的基础上给出玻色—爱因斯坦统计，并预言了后来被称为玻色—爱因斯坦凝聚的现象。",
+          "source": "",
+          "journey": "量子与统计"
+        },
+        {
+          "id": "ach-einstein-024",
+          "title": "发表《统一场论》",
+          "when": "1929",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他公布把引力场与电磁场统一起来的尝试，引起媒体极大关注。此后二十余年他持续在做这件事，但未获成功。",
+          "source": "",
+          "journey": "广义相对论"
+        },
+        {
+          "id": "ach-einstein-025",
+          "title": "受聘为普林斯顿高等研究院教授",
+          "when": "1932",
+          "domain": "career",
+          "pivotal": true,
+          "context": "（史实背景）他受聘于新成立的普林斯顿高等研究院，原计划在柏林与普林斯顿之间分配时间，次年起定居美国。",
+          "source": "",
+          "journey": "普林斯顿"
+        },
+        {
+          "id": "ach-einstein-026",
+          "title": "与波多尔斯基、罗森发表 EPR 论文",
+          "when": "1935",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）这篇论文提出了后来被称为量子纠缠的问题，成为量子力学基础讨论的起点。",
+          "source": "",
+          "journey": "量子与统计"
+        },
+        {
+          "id": "ach-einstein-027",
+          "title": "任原子科学家紧急委员会主席",
+          "when": "1946",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）战后他出任该委员会主席，推动核武器的国际管制与公众教育。",
+          "source": "",
+          "journey": "普林斯顿"
+        },
+        {
+          "id": "ach-einstein-028",
+          "title": "发表《广义引力论》",
+          "when": "1948",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他继续尝试寻找更普遍的表达方式来处理引力场，这是他晚年一系列统一场论工作的一例。",
+          "source": "",
+          "journey": "广义相对论"
+        },
+        {
+          "id": "ach-einstein-029",
+          "title": "获邀出任以色列总统并婉拒",
+          "when": "1952",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）以色列政府邀请他接任总统，他以自己缺乏处理人事与政务的能力为由谢绝。这算是他被授予过的最特殊的荣誉。",
+          "source": "",
+          "journey": "普林斯顿"
+        }
+      ]
+    },
+    {
+      "id": "curie",
+      "name": "居里夫人",
+      "tagline": "物理学家、化学家，放射性研究奠基者",
+      "summary": "从华沙到巴黎，靠家教攒钱读完大学；与丈夫在简陋的棚屋里从成吨沥青铀矿中提炼出镭。丈夫去世后她接任他的教职，成为索邦第一位女教授，也是唯一在两个不同学科里拿到诺贝尔奖的人。",
+      "birthYear": 1867,
+      "deathYear": 1934,
+      "provenance": "收录范围：只收录可称为成就的公开节点 —— 作品、著作、论文、官职、功名、工程、荣誉、讲学、育人。生卒、疾病、婚丧、迁居与单纯的行程不收录（生卒年份见人物资料）。本条目为离线整理，只使用年份级、流传较广的公开节点，未逐条核对，不作为史料引用。资料来源字段一律留空 —— 它留给管理端逐条补全，而不是在这里编造一个看起来很像的引文。",
+      "importanceRule": "发现钋与镭、两次诺贝尔奖、接任索邦教职、提炼出纯镭、战地 X 光车记为 4；其余公开成就（学位、任职、著作）记为 3。共鸣度不评分。",
+      "fictional": false,
+      "published": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z",
+      "journeys": [
+        {
+          "id": "jr-curie-0",
+          "name": "从华沙到巴黎",
+          "domainHint": "academy"
+        },
+        {
+          "id": "jr-curie-1",
+          "name": "棚屋里的镭",
+          "domainHint": "craft"
+        },
+        {
+          "id": "jr-curie-2",
+          "name": "失去皮埃尔之后",
+          "domainHint": "career"
+        },
+        {
+          "id": "jr-curie-3",
+          "name": "战地 X 光车",
+          "domainHint": "health"
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ach-curie-000",
+          "title": "以第一名取得物理学学士学位",
+          "when": "1893",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）她在索邦以第一名的成绩取得物理学学士学位，此前靠家教积蓄与姐姐接济维持学业。",
+          "source": "",
+          "journey": "从华沙到巴黎"
+        },
+        {
+          "id": "ach-curie-001",
+          "title": "取得数学学士学位",
+          "when": "1894",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）她取得第二个学士学位，同年为研究钢铁磁性而结识皮埃尔·居里。",
+          "source": "",
+          "journey": "从华沙到巴黎"
+        },
+        {
+          "id": "ach-curie-002",
+          "title": "提出铀射线是原子的性质并系统研究",
+          "when": "1897",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）她开始研究贝克勒尔发现的铀盐射线，并意识到这可能是一种普遍存在的原子现象，由此开创了放射性研究。",
+          "source": "",
+          "journey": "棚屋里的镭"
+        },
+        {
+          "id": "ach-curie-003",
+          "title": "提出「放射性」一词",
+          "when": "1898",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）她用「放射性」来统称这类无需外界作用、自发辐射的现象，这个词此后成为整个领域的名称。",
+          "source": "",
+          "journey": "棚屋里的镭"
+        },
+        {
+          "id": "ach-curie-004",
+          "title": "发现钋",
+          "when": "1898",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）她与皮埃尔、贝蒙一起从沥青铀矿中分离出新元素，以她的祖国波兰命名为钋。",
+          "source": "",
+          "journey": "棚屋里的镭"
+        },
+        {
+          "id": "ach-curie-005",
+          "title": "发现镭",
+          "when": "1898",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）同年他们又发现了镭，命名取自「光线」。",
+          "source": "",
+          "journey": "棚屋里的镭"
+        },
+        {
+          "id": "ach-curie-006",
+          "title": "任塞夫勒女子师范学校教师",
+          "when": "1900",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（史实背景）她开始在该校任教，这是她第一份有固定收入的教职。",
+          "source": "",
+          "journey": "从华沙到巴黎"
+        },
+        {
+          "id": "ach-curie-007",
+          "title": "提炼出氯化镭并测定镭的原子量",
+          "when": "1902",
+          "domain": "craft",
+          "pivotal": true,
+          "context": "（史实背景）在与丈夫共同使用的简陋棚屋里，她从数吨沥青铀矿残渣中提炼出约十分之一克氯化镭，并测定了镭的原子量。",
+          "source": "",
+          "journey": "棚屋里的镭"
+        },
+        {
+          "id": "ach-curie-008",
+          "title": "完成博士论文《放射性物质的研究》",
+          "when": "1903",
+          "domain": "academy",
+          "pivotal": false,
+          "context": "（史实背景）她以此通过博士论文答辩，是法国第一位取得物理学博士学位的女性；论文随后出版成书。",
+          "source": "",
+          "journey": "棚屋里的镭"
+        },
+        {
+          "id": "ach-curie-009",
+          "title": "与皮埃尔、贝克勒尔共获诺贝尔物理学奖",
+          "when": "1903",
+          "domain": "academy",
+          "pivotal": true,
+          "context": "（史实背景）她成为第一位获得诺贝尔奖的女性。",
+          "source": "",
+          "journey": "棚屋里的镭"
+        },
+        {
+          "id": "ach-curie-010",
+          "title": "接任皮埃尔在索邦的教职",
+          "when": "1906-04",
+          "domain": "career",
+          "pivotal": true,
+          "context": "（史实背景）皮埃尔因马车事故去世后，她接任丈夫在索邦的教职，成为该校历史上第一位女教授。",
+          "source": "",
+          "journey": "失去皮埃尔之后"
+        },
+        {
+          "id": "ach-curie-011",
+          "title": "出版《放射性专论》并制出镭的标准样品",
+          "when": "1910",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）她把自己多年的研究成果写成专著，并制备了国际通用的镭标准样品。",
+          "source": "",
+          "journey": "失去皮埃尔之后"
+        },
+        {
+          "id": "ach-curie-012",
+          "title": "获诺贝尔化学奖",
+          "when": "1911",
+          "domain": "academy",
+          "pivotal": true,
+          "context": "（史实背景）她因分离出纯镭并测定其性质获得诺贝尔化学奖，成为唯一在两个不同学科获得诺贝尔奖的科学家。",
+          "source": "",
+          "journey": "失去皮埃尔之后"
+        },
+        {
+          "id": "ach-curie-013",
+          "title": "主持建成巴黎镭研究所",
+          "when": "1914",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（史实背景）由她主持的镭研究所建成，此后成为放射性研究的中心之一。",
+          "source": "",
+          "journey": "失去皮埃尔之后"
+        },
+        {
+          "id": "ach-curie-014",
+          "title": "组织战地流动 X 光车并培训操作人员",
+          "when": "1914-08",
+          "domain": "craft",
+          "pivotal": true,
+          "context": "（史实背景）战争期间她组织了一批装有 X 光设备的流动车，并亲自到前线培训操作人员，据估算有上百万伤员因此接受过检查。",
+          "source": "",
+          "journey": "战地 X 光车"
+        },
+        {
+          "id": "ach-curie-015",
+          "title": "访美并接受一克镭的赠予",
+          "when": "1921",
+          "domain": "relation",
+          "pivotal": false,
+          "context": "（史实背景）美国妇女界为她募集资金购买了一克镭赠予她，由哈定总统在白宫转交。",
+          "source": "",
+          "journey": "失去皮埃尔之后"
+        },
+        {
+          "id": "ach-curie-016",
+          "title": "为华沙放射学研究所募得第二克镭",
+          "when": "1929",
+          "domain": "relation",
+          "pivotal": false,
+          "context": "（史实背景）她再次访问美国，为在家乡华沙建立的放射学研究所募集到第二克镭。",
+          "source": "",
+          "journey": "失去皮埃尔之后"
+        },
+        {
+          "id": "ach-curie-017",
+          "title": "出席以她命名的华沙镭研究所落成",
+          "when": "1932",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（史实背景）她回到少年时代离开的城市，参加镭研究所落成典礼。",
+          "source": "",
+          "journey": "从华沙到巴黎"
+        }
+      ]
+    },
+    {
+      "id": "van-gogh",
+      "name": "梵高",
+      "tagline": "荷兰画家，后印象派代表人物",
+      "summary": "二十七岁才决定当画家，十年里几乎把命都画了进去。人生最后两年多在法国南部度过，画出《向日葵》《星月夜》这一批作品。他的成就几乎全部落在画作本身 —— 生前几乎没有卖出过画。",
+      "birthYear": 1853,
+      "deathYear": 1890,
+      "provenance": "收录范围：只收录可称为成就的公开节点 —— 作品、著作、论文、官职、功名、工程、荣誉、讲学、育人。生卒、疾病、婚丧、迁居与单纯的行程不收录（生卒年份见人物资料）。本条目为离线整理，只使用年份级、流传较广的公开节点，未逐条核对，不作为史料引用。资料来源字段一律留空 —— 它留给管理端逐条补全，而不是在这里编造一个看起来很像的引文。他的成就几乎全部是画作，所以这一片星空集中在「创作」一个领域 —— 这不是数据缺失，是事实如此。",
+      "importanceRule": "《吃土豆的人》《向日葵》《星月夜》《麦田群鸦》等代表作记为 4；其余年份明确的作品记为 3。共鸣度不评分。",
+      "fictional": false,
+      "published": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z",
+      "journeys": [
+        {
+          "id": "jr-van-gogh-0",
+          "name": "荷兰时期",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-van-gogh-1",
+          "name": "巴黎时期",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-van-gogh-2",
+          "name": "阿尔勒：黄色房子",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-van-gogh-3",
+          "name": "圣雷米与奥维尔",
+          "domainHint": "creation"
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ach-van-gogh-000",
+          "title": "作《吃土豆的人》",
+          "when": "1885",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）他在纽南期间完成的代表作，试图表现农民真实的生活面貌，是他自认的早期总结之作。",
+          "source": "",
+          "journey": "荷兰时期"
+        },
+        {
+          "id": "ach-van-gogh-001",
+          "title": "作《唐吉老爹》",
+          "when": "1887",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）为画材商唐吉老爹所作肖像。在巴黎的两年里他的用色明显变亮，并吸收了印象派与新印象派的手法。",
+          "source": "",
+          "journey": "巴黎时期"
+        },
+        {
+          "id": "ach-van-gogh-002",
+          "title": "作《盛开的桃花》等果园系列",
+          "when": "1888-04",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）到阿尔勒后他先画了一批开花的果园与桃树，用明亮的粉色与蓝色记录南法的春天。这批作品是他用色转变的见证。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-003",
+          "title": "作《向日葵》系列",
+          "when": "1888-08",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）他为迎接高更的到来，画了一组以向日葵为主题的画作，用以装饰阿尔勒住处的客房。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-004",
+          "title": "作《黄房子》",
+          "when": "1888-09",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他画下自己租住的阿尔勒住处，希望把它变成画家互助的「南方画室」。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-005",
+          "title": "作《夜间咖啡馆》",
+          "when": "1888-09",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）以强烈的黄与蓝画下阿尔勒的夜间室内，是他色彩实验的代表作之一。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-006",
+          "title": "作《夜间的露天咖啡座》",
+          "when": "1888-09",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）画的是夜晚，画面里却没有一处黑：星空是浓蓝，灯棚与平台是暖黄与橙，夜与昼的用色几乎被调换过来。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-007",
+          "title": "作《罗纳河上的星夜》",
+          "when": "1888-09",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）在阿尔勒罗纳河畔所作夜景，先于《星月夜》。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-008",
+          "title": "作《阿尔勒的卧室》",
+          "when": "1888-10",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）他画出自己的卧室，用色块而非透视来组织空间，并留下三个几乎相同的版本。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-009",
+          "title": "为邮差鲁林一家作肖像系列",
+          "when": "1888-10",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）在阿尔勒愿意为他做模特的人很少，邮差约瑟夫·鲁林及其家人是其中最重要的几位，他为他们画了一系列肖像。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-010",
+          "title": "作《耳朵包着绷带的烟斗自画像》",
+          "when": "1889-01",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）割耳事件之后所作的自画像之一，头上缠着绷带、嘴里叼着烟斗，是他自画像中最广为人知的一幅。",
+          "source": "",
+          "journey": "阿尔勒：黄色房子"
+        },
+        {
+          "id": "ach-van-gogh-011",
+          "title": "作《鸢尾花》",
+          "when": "1889-05",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）入院初期所作，以鸢尾花为主题，是他生前较早就被展出的作品之一。",
+          "source": "",
+          "journey": "圣雷米与奥维尔"
+        },
+        {
+          "id": "ach-van-gogh-012",
+          "title": "在圣雷米作《星月夜》",
+          "when": "1889-06",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）他在圣雷米的精神病院中凭记忆画出此画，成为他流传最广的作品。",
+          "source": "",
+          "journey": "圣雷米与奥维尔"
+        },
+        {
+          "id": "ach-van-gogh-013",
+          "title": "作《麦田与柏树》",
+          "when": "1889-09",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）在圣雷米期间反复描绘柏树与麦田，形成一组系列作品。",
+          "source": "",
+          "journey": "圣雷米与奥维尔"
+        },
+        {
+          "id": "ach-van-gogh-014",
+          "title": "作《杏花》",
+          "when": "1890",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）为弟弟提奥新生的儿子所作，是他送给家人的礼物。",
+          "source": "",
+          "journey": "圣雷米与奥维尔"
+        },
+        {
+          "id": "ach-van-gogh-015",
+          "title": "作《加歇医生像》",
+          "when": "1890-06",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（史实背景）在奥维尔为照料他的加歇医生所作肖像。此画后来长期保持着艺术品拍卖的最高价纪录。",
+          "source": "",
+          "journey": "圣雷米与奥维尔"
+        },
+        {
+          "id": "ach-van-gogh-016",
+          "title": "作《麦田群鸦》",
+          "when": "1890-07",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（史实背景）他人生最后一批作品之一，以横向的三联构图与飞起的鸦群为人熟知。",
+          "source": "",
+          "journey": "圣雷米与奥维尔"
+        }
+      ]
+    },
+    {
+      "id": "chen-ling",
+      "name": "陈伶",
+      "tagline": "虚构人物 · 出自三九音域《我不是戏神》· 剧情成就整理，非史料",
+      "summary": "网络小说《我不是戏神》的主角。原为京城剧院的实习编导，身死之后穿越到赤色流星令文明停滞的世界，体内寄宿「观众」，必须以表演维系期待值求生。他走的是戏神道被扭曲后的路径【嘲】，从一阶「无相」一路晋升到十阶「隐和圆」，途中完成了十五部剧目，并成为黄昏社的第六代红王。",
+      "birthYear": null,
+      "deathYear": null,
+      "provenance": "⚠️ 这是虚构人物，不是史料。陈伶是网络小说《我不是戏神》的主角（作者三九音域，2023-09-28 起连载于番茄小说，2026 年 4 月完结，约 400.4 万字）。他与下面所有条目都只存在于小说里，请勿引用，也不要与任何真人对应。 收录范围：仍只收录成就 —— 完成的剧目、神道阶位晋升、任职与封号。小说里的人物关系、亲情与牺牲属于传记事件，不收录。 ★ 年份字段说明：小说没有真实纪年，公开资料也没有给出各事件的章节位置。这里的年份是「连载区间归年」——按阶位与剧目的先后粗分为 2023–2026 四个年度，只为了让时间轴能把它们排开，不代表事件在书中的精确年份或先后。 资料矛盾（未擅自调和）：公开资料的作品条目正文记陈伶为「10 阶升维者」，同一页的黄昏社成员表却记为「9 阶」；此处采用正文的 10 阶，并把第十阶的晋升单列为一条。 来源：公开资料的整理（百度百科《我不是戏神》条目、快懂百科角色条目，2026-10 检索），只采用其中结构清晰、彼此一致的部分；资料未载具体情节的，条目里如实写「资料未载」，没有补写。 本条目为离线整理，未逐条核对，不作为史料引用。资料来源字段一律留空 —— 它留给管理端逐条补全，而不是在这里编造一个看起来很像的引文。",
+      "importanceRule": "十阶晋升、十五部剧目的完成、接任第六代红王记为 4；其余阶位晋升、唱段与封号记为 3。共鸣度不评分。",
+      "fictional": true,
+      "published": true,
+      "updatedAt": "2026-01-01T00:00:00.000Z",
+      "journeys": [
+        {
+          "id": "jr-chen-ling-0",
+          "name": "戏神道·十阶",
+          "domainHint": "craft"
+        },
+        {
+          "id": "jr-chen-ling-1",
+          "name": "剧目",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-chen-ling-2",
+          "name": "唱段与流传",
+          "domainHint": "creation"
+        },
+        {
+          "id": "jr-chen-ling-3",
+          "name": "身份与封号",
+          "domainHint": "career"
+        }
+      ],
+      "achievements": [
+        {
+          "id": "ach-chen-ling-000",
+          "title": "晋升戏神道【嘲】一阶·无相",
+          "when": "2023",
+          "domain": "craft",
+          "pivotal": true,
+          "context": "（虚构记录）陈伶所走的是戏神道被扭曲后的路径【嘲】。第一阶「无相」无形无相、相由心生，可以变幻为任何事物；资料列出的晋升前置演出是「失去一个重要的人，并成为他」。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-001",
+          "title": "晋升戏神道【嘲】二阶·猩红戏法",
+          "when": "2023",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（虚构记录）第二阶「猩红戏法」可以近似的物件替换对方的物件；资料列出的晋升前置演出是「完成一场至少五十人参与的演出，并确保演出结束后无人生还」。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-002",
+          "title": "晋升戏神道【嘲】三阶·织命",
+          "when": "2023",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（虚构记录）第三阶「织命」以编导的信念感影响周围环境、进而影响角色的命运，但必须符合逻辑，能做到什么程度取决于他对角色的剖析程度。资料列出两条前置演出：在至少一百人的见证下完成一次震撼人心的退场；在无人问津的舞台上完成一次掌声鸣动的落幕。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-010",
+          "title": "完成剧目【无心】",
+          "when": "2023",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-011",
+          "title": "完成剧目【无人生还】",
+          "when": "2023",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。资料提到该剧目与「兵道古藏」有关，并牵涉黑桃6简长生的死与复生。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-012",
+          "title": "完成剧目【余烬落幕时】",
+          "when": "2023",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-013",
+          "title": "完成剧目【极光，永不消逝】",
+          "when": "2023",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-026",
+          "title": "加入黄昏社，代号「红心6」",
+          "when": "2023",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（虚构记录）黄昏社的前身是戏道古藏的戏班子，以扑克牌为代号，因目的与人类九大界域相反而被列为最高级别通缉组织。陈伶在社中的牌面是红心 6。",
+          "source": "",
+          "journey": "身份与封号"
+        },
+        {
+          "id": "ach-chen-ling-003",
+          "title": "晋升戏神道【嘲】四阶·卡",
+          "when": "2024",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（虚构记录）第四阶「卡」是领域技能，可以定格、审视、篡改一定时间内的既定剧情；限制极多，需要逻辑闭环，对事物影响越大、对自身的副作用越大。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-004",
+          "title": "晋升戏神道【嘲】五阶·灾厄化",
+          "when": "2024",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（虚构记录）第五阶「灾厄化」在第一轮「斩煞」中掌控了一部分嘲灾的力量，身体可以化作红纸无限延伸与分裂，半边面孔也能变成扁平的红纸绘。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-005",
+          "title": "晋升戏神道【嘲】六阶·渊鬼度",
+          "when": "2024",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（虚构记录）第六阶「渊鬼度」能把战利品的灵魂囚禁在物品之中，让物品拥有自我意识；对敌人伤得越深、注入越多，对方身死魂离后即可操控其灵魂。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-014",
+          "title": "完成剧目【红尘猎手】",
+          "when": "2024",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-015",
+          "title": "完成剧目【玫瑰，礼炮，与盛大登场】",
+          "when": "2024",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-016",
+          "title": "完成剧目【群星所向】",
+          "when": "2024",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-017",
+          "title": "完成剧目【如果的如果】",
+          "when": "2024",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-006",
+          "title": "晋升戏神道【嘲】七阶·红伞纳魂",
+          "when": "2025",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（虚构记录）第七阶「红伞纳魂」可以无限吸收灵魂，吸收越多、能发挥的杀伤力越强。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-007",
+          "title": "晋升戏神道【嘲】八阶·破壁",
+          "when": "2025",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（虚构记录）第八阶「破壁」可以破开不同纬度之间的壁垒进行穿梭。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-008",
+          "title": "晋升戏神道【嘲】九阶",
+          "when": "2025",
+          "domain": "craft",
+          "pivotal": false,
+          "context": "（虚构记录）第九阶的阶名在公开资料中未给出名称，故此处不写。资料列出的前置演出是：在空无一人的舞台上见证一个时代的落幕；在至少千万人的见证下完成属于自己的神道自证。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-018",
+          "title": "完成剧目【命运狂响】",
+          "when": "2025",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。资料提到红袖参与完成了该剧目。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-019",
+          "title": "完成剧目【唯我】",
+          "when": "2025",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。资料把该剧目记在他晋升六阶时的演出名下，其中「黑伶」（他的负面情绪化身）也参与了这一场。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-020",
+          "title": "完成剧目【孤王】",
+          "when": "2025",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-021",
+          "title": "完成剧目【赤王归】",
+          "when": "2025",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-025",
+          "title": "成为能唱出《安魂谣》的第五人",
+          "when": "2025",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（虚构记录）《安魂谣》是书中唯一并非真实戏曲选段的唱段。资料的人物表把陈伶记为「能够唱出安魂谣的第五人」。",
+          "source": "",
+          "journey": "唱段与流传"
+        },
+        {
+          "id": "ach-chen-ling-027",
+          "title": "被称为鬼嘲深渊之王",
+          "when": "2025",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（虚构记录）资料把他的身份之一记为「鬼嘲深渊之王」。这是小说里的地名与称号，不指任何现实地点。",
+          "source": "",
+          "journey": "身份与封号"
+        },
+        {
+          "id": "ach-chen-ling-009",
+          "title": "晋升戏神道【嘲】十阶·隐和圆",
+          "when": "2026",
+          "domain": "craft",
+          "pivotal": true,
+          "context": "（虚构记录）第十阶「隐和圆」以符号代替书写命运：对过去的命运埋下伏笔（隐），对指定的未来选取一个最有利的结局（圆）；发动时需要戏院中的观众以自身精神力参与，影响越大、消耗与所需期待值越大。",
+          "source": "",
+          "journey": "戏神道·十阶"
+        },
+        {
+          "id": "ach-chen-ling-022",
+          "title": "完成剧目【群星闪耀时】",
+          "when": "2026",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-023",
+          "title": "完成剧目【风雨藏云】",
+          "when": "2026",
+          "domain": "creation",
+          "pivotal": false,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-024",
+          "title": "完成剧目【第五终章】",
+          "when": "2026",
+          "domain": "creation",
+          "pivotal": true,
+          "context": "（虚构记录）陈伶完成的十五部剧目之一。",
+          "source": "",
+          "journey": "剧目"
+        },
+        {
+          "id": "ach-chen-ling-028",
+          "title": "成为戏神道【嘲】路径魁首",
+          "when": "2026",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（虚构记录）在资料的神道表中，戏神道【嘲】/【不当人】路径的魁首记为陈伶，阶位记为 10 阶（升维者）。",
+          "source": "",
+          "journey": "身份与封号"
+        },
+        {
+          "id": "ach-chen-ling-029",
+          "title": "成为戏道古藏之主",
+          "when": "2026",
+          "domain": "career",
+          "pivotal": false,
+          "context": "（虚构记录）资料把他的身份之一记为「现任戏道古藏之主」。",
+          "source": "",
+          "journey": "身份与封号"
+        },
+        {
+          "id": "ach-chen-ling-030",
+          "title": "接任第六代红王",
+          "when": "2026",
+          "domain": "career",
+          "pivotal": true,
+          "context": "（虚构记录）「红王」是黄昏社的最高代号。资料把陈伶的牌面记为「红心6 → 红王 JOKER（第六代）」。",
+          "source": "",
+          "journey": "身份与封号"
+        }
+      ]
+    }
+  ]
+}
