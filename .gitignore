@@ -8,9 +8,12 @@ dist/
 .DS_Store
 .shots/
 .tmp/
-.shiyun-shots/
+.local-notes/
+
+# 另一个项目（诗云）的临时文件，不属于本仓库：
+# 我曾经为了「清理无关条目」把它从 .gitignore 删掉，结果 git add -A 就把里面 3 个文件
+# 扫进了提交 —— 差点推进公开仓库。条目留着，别再删。
 .shiyun-scratch/
-_ref/
 
 # 服务器的运行时数据：管理员口令哈希、会话密钥、名人库的当前状态。
 # 名人库的「源头」是 server/seed/lives.json（提交进仓库）；
