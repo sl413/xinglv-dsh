@@ -70,7 +70,14 @@ async function waitUntil(pred, timeoutMs = 20000, stepMs = 400) {
 await page.goto(`${BASE}/?qa&q=balanced`, { waitUntil: 'domcontentloaded', timeout: 60000 })
 await page.waitForSelector('canvas', { timeout: 60000 })
 await page.waitForFunction(() => window.__XINGLV_QA__, { timeout: 60000 })
-await sleep(11000)
+// 等应用真的就绪，而不是赌 11 秒（CI 的 runner 慢得多）
+await waitUntil(async () => {
+  try {
+    return (await qa()).phase === 'ready'
+  } catch {
+    return false
+  }
+}, 60000)
 
 const s0 = await qa()
 check('入口层出现（空档案）', s0.total === 0 && s0.phase === 'ready', `total=${s0.total} phase=${s0.phase}`)
@@ -87,7 +94,7 @@ const clickedNew = await page.evaluate(() => {
   return false
 })
 check('点「点亮我的第一颗星」打开创作面板', clickedNew)
-await sleep(1200)
+await waitUntil(() => page.evaluate(() => !!document.querySelector('.composer')), 15000)
 const composerOpen = await page.evaluate(() => !!document.querySelector('.composer'))
 check('创作面板渲染', composerOpen)
 
@@ -107,33 +114,70 @@ const saved = await page.evaluate(() => {
   return false
 })
 check('点保存', saved)
-await sleep(4000)
+// ★ 不能用固定 sleep 等落盘：保存要「写库 → 读回校验」，慢机器上 4 秒不够，于是
+//   「星空里多了一颗星 total=0」会随机失败（CI 上真的发生过一次 45/47）。
+//   改成轮询条件 —— 这是本套件里最后一处固定等待，其余同类位置一并改掉。
+const persisted = await waitUntil(async () => {
+  const s = await qa()
+  return s.total === 1 && !!s.lastSavedAt
+}, 30000)
 const s1 = await qa()
-check('星空里多了一颗星', s1.total === 1, `total=${s1.total}`)
+check('星空里多了一颗星', s1.total === 1, `total=${s1.total}（轮询${persisted ? '成功' : '超时'}）`)
 check('落盘后有保存时间戳', !!s1.lastSavedAt, `lastSavedAt=${s1.lastSavedAt}`)
 
 // --- 刷新后仍在 ---
 await page.reload({ waitUntil: 'domcontentloaded' })
 await page.waitForFunction(() => window.__XINGLV_QA__, { timeout: 60000 })
-await sleep(11000)
+const reloaded = await waitUntil(async () => {
+  try {
+    const st = await qa()
+    return st.total === 1 && st.phase === 'ready'
+  } catch {
+    return false
+  }
+}, 45000)
 const s2 = await qa()
-check('刷新后记录还在（真的落盘了）', s2.total === 1, `total=${s2.total}`)
+check('刷新后记录还在（真的落盘了）', s2.total === 1, `total=${s2.total}（轮询${reloaded ? '成功' : '超时'}）`)
 
 // --- 点开这颗星（真实点击画布上的星）---
+// ★ 坐标要**轮询等到**：刷新后「数据载入」与「星被渲染进场景」不是同一时刻，
+//   只等 total 就取坐标会拿到空数组，于是下面三条断言整块被跳过（实测 47 → 44 条）。
+const gotStar = await waitUntil(async () => {
+  try {
+    return (await page.evaluate(() => window.__XINGLV_QA__.starScreenXY().length)) > 0
+  } catch {
+    return false
+  }
+}, 45000)
 const starXY = await page.evaluate(() => {
   const list = window.__XINGLV_QA__.starScreenXY()
   return list.length ? { x: list[0].x, y: list[0].y, id: list[0].id } : null
 })
-check('能拿到星的屏幕坐标', !!starXY, starXY ? `id=${starXY.id}` : '没有星')
+check('能拿到星的屏幕坐标', !!starXY, starXY ? `id=${starXY.id}` : `没有星（轮询${gotStar ? '成功' : '超时'}）`)
 if (starXY) {
   await page.mouse.click(starXY.x, starXY.y)
-  await sleep(6500)
+  // 等的是**镜头真正到位**（camera().phase === 'focused'），不是「面板打开」：
+  // 面板在飞行途中就开了，镜头还要再 settle 约 1.1 秒。断言测的是镜头状态，就该等镜头状态
+  // （第一次改轮询时只等了面板，于是这里随机拿到 phase='fly'）。
+  const arrived = await waitUntil(async () => {
+    try {
+      const st = await qa()
+      const phase = await page.evaluate(() => window.__XINGLV_QA__.camera().phase)
+      return st.reading?.kind === 'star' && st.focusedStarId === starXY.id && phase === 'focused'
+    } catch {
+      return false
+    }
+  }, 30000)
   const s3 = await qa()
   // ★ 这里要读的是**镜头导演**的 phase，不是应用的 phase（后者只有 loading/entering/ready）。
   //   第一次写这条断言时用错了字段，把自己的测量错误当成了产品缺陷。
   const camPhase = await page.evaluate(() => window.__XINGLV_QA__.camera().phase)
-  check('点星后镜头进入 focused', camPhase === 'focused', `camera.phase=${camPhase}`)
-  check('故事面板打开且指向这颗星', s3.reading && s3.reading.kind === 'star' && s3.focusedStarId === starXY.id, `reading=${JSON.stringify(s3.reading)} focused=${s3.focusedStarId}`)
+  check('点星后镜头进入 focused', camPhase === 'focused', `camera.phase=${camPhase}（轮询${arrived ? '成功' : '超时'}）`)
+  check(
+    '故事面板打开且指向这颗星',
+    s3.reading && s3.reading.kind === 'star' && s3.focusedStarId === starXY.id,
+    `reading=${JSON.stringify(s3.reading)} focused=${s3.focusedStarId}（轮询${arrived ? '成功' : '超时'}）`,
+  )
   const panelText = await page.evaluate(() => document.querySelector('.reading')?.textContent ?? '')
   check('面板里显示的是这颗星的内容', panelText.includes('把第一件作品交给陌生人'), panelText.slice(0, 40))
 }
@@ -153,31 +197,45 @@ check('时间轴可回到最后', obsAfter.b > 0.95, `obsTime=${obsAfter.b}`)
 
 // --- 自动播放：推进 / 暂停 / 倍速 ---
 await page.keyboard.press('Space')
-await sleep(1500)
+const playing = await waitUntil(async () => (await qa()).obsPlaying === true, 15000)
 const play1 = await qa()
-check('空格键开始播放', play1.obsPlaying === true, `obsPlaying=${play1.obsPlaying}`)
+check('空格键开始播放', play1.obsPlaying === true, `obsPlaying=${play1.obsPlaying}（轮询${playing ? '成功' : '超时'}）`)
 const t1 = play1.obsTime
-await sleep(2200)
+const advanced = await waitUntil(async () => (await qa()).obsTime !== t1, 20000)
 const play2 = await qa()
-check('播放中 obsTime 在推进', play2.obsTime !== t1, `${t1} → ${play2.obsTime}`)
+check('播放中 obsTime 在推进', play2.obsTime !== t1, `${t1} → ${play2.obsTime}（轮询${advanced ? '成功' : '超时'}）`)
 await page.keyboard.press('Space')
-await sleep(1500)
+const paused = await waitUntil(async () => (await qa()).obsPlaying === false, 15000)
 const play3 = await qa()
-check('空格键暂停', play3.obsPlaying === false, `obsPlaying=${play3.obsPlaying}`)
+check('空格键暂停', play3.obsPlaying === false, `obsPlaying=${play3.obsPlaying}（轮询${paused ? '成功' : '超时'}）`)
 
 // --- 删除 + 撤销（真实 UI）---
 // ★ 删除前要先把故事面板重新打开：上面刚按过空格开始播放，而**播放会按设计收起面板**
 //   （store 注释：「播放是把这一生整体看一遍，不是读某一颗星」）。
 //   这不是 bug，是刻意的 —— 但它会让「面板上有删除入口」这条断言在错误的时机采样。
 await page.evaluate(() => window.__XINGLV_QA__.setObs(1))
-await sleep(1400)
+// 等这颗星重新亮起来（时间轴拉回最后是同步的，但渲染与拾取要等一帧）
+await waitUntil(async () => {
+  try {
+    return (await page.evaluate(() => window.__XINGLV_QA__.starScreenXY().length)) > 0
+  } catch {
+    return false
+  }
+}, 20000)
 const xyAgain = await page.evaluate(() => {
   const list = window.__XINGLV_QA__.starScreenXY()
   return list.length ? { x: list[0].x, y: list[0].y } : null
 })
 if (xyAgain) {
   await page.mouse.click(xyAgain.x, xyAgain.y)
-  await sleep(6500)
+  // 等故事面板真的打开（不赌固定 6.5 秒）
+  await waitUntil(async () => {
+    try {
+      return !!(await qa()).reading
+    } catch {
+      return false
+    }
+  }, 30000)
 }
 // ★ 选择器必须精确到「故事面板」：`.reading` 这个类**两个面板都有**
 //   （故事面板与来时路面板），querySelector 取到后者时就找不到删除按钮了 ——
@@ -193,7 +251,14 @@ const delClicked = await page.evaluate(() => {
   return false
 })
 check('故事面板上有删除入口', delClicked)
-await sleep(900)
+// 等「确认删除」出现（有二次确认时）或已经删掉（没有二次确认时），不赌固定延迟
+await waitUntil(async () => {
+  const state = await page.evaluate(() => ({
+    confirm: !![...document.querySelectorAll('button')].find((el) => /确认删除/.test(el.textContent)),
+    total: window.__XINGLV_QA__.state().total,
+  }))
+  return state.confirm || state.total === 0
+}, 15000)
 // 可能的二次确认
 await page.evaluate(() => {
   const b = [...document.querySelectorAll('button')].find((el) => /确认删除/.test(el.textContent))
@@ -254,9 +319,16 @@ const deep = await browser.newPage()
 await deep.setViewport({ width: 1440, height: 900 })
 await deep.goto(`${BASE}/life/su-shi?qa&q=balanced`, { waitUntil: 'domcontentloaded', timeout: 60000 })
 await deep.waitForFunction(() => window.__XINGLV_QA__, { timeout: 60000 })
-await sleep(11000)
+// 等他人星空真的载入（轮询，不赌 11 秒）
+const deepReady = await waitUntil(async () => {
+  try {
+    return (await deep.evaluate(() => window.__XINGLV_QA__.state().total)) === 39
+  } catch {
+    return false
+  }
+}, 45000)
 const deepState = await deep.evaluate(() => window.__XINGLV_QA__.state())
-check('深链 /life/su-shi 直接可用（刷新也能开）', deepState.total === 39, `total=${deepState.total}`)
+check('深链 /life/su-shi 直接可用（刷新也能开）', deepState.total === 39, `total=${deepState.total}（轮询${deepReady ? '成功' : '超时'}）`)
 const guestBar = await deep.evaluate(() => !!document.querySelector('.guest-bar'))
 check('他人星空有常驻横幅', guestBar)
 // 看别人星空时的写入守卫
@@ -485,7 +557,14 @@ const mobile = await browser.newPage()
 await mobile.setViewport({ width: 430, height: 900, deviceScaleFactor: 1 })
 await mobile.goto(`${BASE}/?qa&q=balanced`, { waitUntil: 'domcontentloaded', timeout: 60000 })
 await mobile.waitForSelector('canvas', { timeout: 60000 })
-await sleep(11000)
+// 等就绪再量布局，否则量到的是启动过程中的过渡态
+await waitUntil(async () => {
+  try {
+    return (await mobile.evaluate(() => window.__XINGLV_QA__.state().phase)) === 'ready'
+  } catch {
+    return false
+  }
+}, 60000)
 const overflow = await mobile.evaluate(() => ({
   scrollW: document.documentElement.scrollWidth,
   innerW: window.innerWidth,
@@ -501,6 +580,12 @@ check('移动端无横向溢出', overflow.scrollW <= overflow.innerW + 1, `scro
 await browser.close()
 
 /* ------------------------------------------------------------------ 汇总 */
+// ★ 断言条数自检：某些块（如 `if (starXY) { … }`）在前提不成立时会**静默跳过**，
+//   于是套件会显示「44/44 通过」——数字好看，其实少了 3 条检查。
+//   把期望条数钉死，跳过的块就变成显式失败。（实测踩过一次：47 → 44）
+const EXPECTED_CHECKS = 47
+check('断言条数完整（没有被静默跳过）', results.length === EXPECTED_CHECKS, `实跑 ${results.length} 条，期望 ${EXPECTED_CHECKS} 条`)
+
 const pass = results.length - failed
 console.log(`\n============================`)
 console.log(`  功能与流畅度：${pass}/${results.length} 通过${failed ? `，${failed} 条失败` : ''}`)
