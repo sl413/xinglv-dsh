@@ -7,6 +7,7 @@ import { buildUniverse, type LifeUniverse } from '../core/layout'
 import { isSampleArchive, sampleArchive } from '../core/sample'
 import { LifeRepository, repository, upsertJourney, type SnapshotInfo } from '../data/repository'
 import { cameraBus } from './bus'
+import { STATIC_SITE } from '../core/buildMode'
 import { detectQuality } from '../universe/quality'
 import { archiveFromLife, type LifeDoc, type LifeSummary } from '../core/lives/types'
 import { fetchLife, fetchLives } from '../core/lives/api'
@@ -952,6 +953,12 @@ export const useLife = create<LifeState>()((set, get) => {
     /* ---------------------------------------------------------- 管理端 */
 
     async refreshSession() {
+      // 静态托管下没有会话这回事：连探都不探。
+      // 原来无条件发 GET /api/session，线上每次访问都会 404 一次（白费往返、控制台留错）。
+      if (STATIC_SITE) {
+        set({ admin: false })
+        return
+      }
       try {
         const { admin } = await fetchSession()
         set({ admin })

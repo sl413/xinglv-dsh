@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="星履">
+  <defs>
+    <radialGradient id="sky" cx="46%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#18213c"/>
+      <stop offset="60%" stop-color="#0a1022"/>
+      <stop offset="100%" stop-color="#05070e"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e8" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#ffcf8a" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#ffcf8a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 夜空 -->
+  <rect width="64" height="64" rx="14" fill="url(#sky)"/>
+
+  <!-- 走过的轨迹：一条柔软的光带 -->
+  <path d="M8 48 Q20 43 27 33 T56 16"
+        fill="none" stroke="#6f9dff" stroke-opacity=".5"
+        stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M8 48 Q20 43 27 33 T56 16"
+        fill="none" stroke="#a8c0ff" stroke-opacity=".22"
+        stroke-width="5" stroke-linecap="round"/>
+
+  <!-- 亮起的那颗星 -->
+  <circle cx="45" cy="22" r="12" fill="url(#glow)"/>
+  <circle cx="45" cy="22" r="2.8" fill="#fffaf0"/>
+  <path d="M45 13.5 L46.4 20.6 L53.5 22 L46.4 23.4 L45 30.5 L43.6 23.4 L36.5 22 L43.6 20.6 Z"
+        fill="#ffe6bb" fill-opacity=".55"/>
+
+  <!-- 沿线留下的足迹 -->
+  <circle cx="23.5" cy="36.5" r="1.7" fill="#a8c0ff" fill-opacity=".95"/>
+  <circle cx="33" cy="27" r="1.2" fill="#8f9dff" fill-opacity=".8"/>
+  <circle cx="13" cy="45.5" r="1" fill="#ffcf8a" fill-opacity=".7"/>
+</svg>

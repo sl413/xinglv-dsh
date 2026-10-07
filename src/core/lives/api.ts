@@ -1,3 +1,4 @@
+import { STATIC_SITE } from '../buildMode'
 import { bundledSeedLives } from './seedBundle'
 import type { LifeDoc, LifeSummary } from './types'
 
@@ -74,6 +75,12 @@ async function getJson<T>(url: string, init?: RequestInit): Promise<T> {
 
 /** 公开：人物列表。服务器优先，失败则回落到内置名人库。 */
 export async function fetchLives(): Promise<LivesPayload> {
+  // ★ 静态托管下没有服务器：直接读内置名人库。
+  //   原来的写法是「先问服务器、失败再回落」，在 Pages 上那一次询问必然 404 ——
+  //   实测线上每次访问都会发出 GET /api/lives 与 /api/session（都是 404，白费两次往返，
+  //   还会在控制台留错）。设计要求就是「服务器优先、失败回落」，
+  //   所以这里只是把「注定失败」的那一步提前跳过，语义没有改变。
+  if (STATIC_SITE) return { lives: bundledList(), source: 'bundled' }
   try {
     const data = await getJson<{ lives: LifeSummary[] }>('/api/lives')
     if (!Array.isArray(data?.lives)) throw new Error('返回格式不对')
@@ -89,6 +96,11 @@ export async function fetchLives(): Promise<LivesPayload> {
 
 /** 公开：某个人物的完整生平 */
 export async function fetchLife(id: string): Promise<{ life: LifeDoc; source: 'server' | 'bundled' }> {
+  if (STATIC_SITE) {
+    const local = bundledDoc(id)
+    if (local) return { life: local, source: 'bundled' }
+    throw new Error('内置名人库里没有这一位')
+  }
   try {
     const data = await getJson<{ life: LifeDoc }>(`/api/lives/${encodeURIComponent(id)}`)
     if (!data?.life) throw new Error('返回格式不对')

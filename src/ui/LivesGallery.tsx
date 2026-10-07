@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { STATIC_SITE } from '../core/buildMode'
 import { navigate } from '../core/router'
 import { useLife } from '../state/store'
 
@@ -73,7 +74,7 @@ export function LivesGallery() {
               按条目
             </button>
           </div>
-          {admin ? (
+          {STATIC_SITE ? null : admin ? (
             <button className="link-btn" onClick={() => { setAdminOpen(true); navigate({ name: 'admin' }) }}>
               管理名人库
             </button>
@@ -87,14 +88,24 @@ export function LivesGallery() {
 
       {source === 'bundled' ? (
         <div className="lives-note">
-          现在是<strong>内置名人库</strong>的只读模式：连不上应用服务器
-          {error ? `（${error}）` : ''}。浏览不受影响，登录与编辑不可用。
+          {STATIC_SITE ? (
+            <>
+              这是<strong>公开的只读名人库</strong>：内容随站点一起发布，不需要服务器，所以没有登录与编辑。
+            </>
+          ) : (
+            <>
+              现在是<strong>内置名人库</strong>的只读模式：连不上应用服务器
+              {error ? `（${error}）` : ''}。浏览不受影响，登录与编辑不可用。
+            </>
+          )}
         </div>
       ) : null}
 
       {status === 'loading' && lives.length === 0 ? <div className="lives-empty">正在读取名人库…</div> : null}
       {status === 'ready' && shown.length === 0 ? (
-        <div className="lives-empty">{query ? `没有找到「${query}」` : '名人库还是空的。站长登录后可以加入第一位人物。'}</div>
+        <div className="lives-empty">
+          {query ? `没有找到「${query}」` : STATIC_SITE ? '名人库还是空的。' : '名人库还是空的。站长登录后可以加入第一位人物。'}
+        </div>
       ) : null}
 
       <div className="lives-grid">
